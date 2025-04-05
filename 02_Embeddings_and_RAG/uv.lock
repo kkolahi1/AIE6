@@ -6,7 +6,7 @@ resolution-markers = [
 ]
 
 [[package]]
-name = "02-pythonic-rag"
+name = "02-embeddings-and-rag"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [

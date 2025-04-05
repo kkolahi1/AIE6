@@ -9,7 +9,7 @@
 
 | 🤓 Pre-work | 📰 Session Sheet | ⏺️ Recording     | 🖼️ Slides        | 👨‍💻 Repo         | 📝 Homework      | 📁 Feedback       |
 |:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|
-| [Session 2: Pre-Work](https://www.notion.so/Session-2-Embeddings-Retrieval-Augmented-Generation-RAG-1c8cd547af3d81978a5af041c0d5b30a?pvs=4#1c8cd547af3d818daab3db56a5e631e9)| [Session 2: Embeddings, Retrieval Augmented Generation (RAG)](https://www.notion.so/Session-2-Embeddings-Retrieval-Augmented-Generation-RAG-1c8cd547af3d81978a5af041c0d5b30a) | Coming Soon!| [Session 2: Embeddings and RAG](https://www.canva.com/design/DAGjaSBtoao/n8G0T_O-2OIQHvgTfqyAxg/edit?utm_content=DAGjaSBtoao&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) | You Are Here! | Coming Soon!| [AIE6 Feedback 4/3](https://forms.gle/iDTwhJ2nLp5CGkqP6) |
+| [Session 2: Pre-Work](https://www.notion.so/Session-2-Embeddings-Retrieval-Augmented-Generation-RAG-1c8cd547af3d81978a5af041c0d5b30a?pvs=4#1c8cd547af3d818daab3db56a5e631e9)| [Session 2: Embeddings, Retrieval Augmented Generation (RAG)](https://www.notion.so/Session-2-Embeddings-Retrieval-Augmented-Generation-RAG-1c8cd547af3d81978a5af041c0d5b30a) | [Recording](https://us02web.zoom.us/rec/share/gSn6QuqteVM4gYK9SslqMLx4MRVcwVj1S9RT-wJQYUuSVBkJ14-Fj8qY8d7Tyx-9.7ijgK2xRDpWFZ-bu) (lz2MTcF=)| [Session 2: Embeddings and RAG](https://www.canva.com/design/DAGjaSBtoao/n8G0T_O-2OIQHvgTfqyAxg/edit?utm_content=DAGjaSBtoao&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) | You Are Here! | [Session 2 Assignment: Embeddings & RAG](https://forms.gle/FNkAuvdZe8eiaLTC8)| [AIE6 Feedback 4/3](https://forms.gle/iDTwhJ2nLp5CGkqP6)
 
 
 ### Outline:
@@ -66,7 +66,21 @@ Looking forward to more AI-driven adventures! 🌟 Feel free to connect if you'd
 
 #OpenAI #Chainlit #AIPowered #Innovation #TechJourney
 ```
+## API Key Setup
 
+### Local Development
+1. Create a `.env` file in the project directory
+2. Add your OpenAI API key:
+   ```bash
+   OPENAI_API_KEY=your_api_key_here
+   ```
+
+### Deployment
+- **GitHub**: Use repository secrets
+- **Huggingface**: Use Space secrets
+- **Other platforms**: Use their environment variable systems
+
+> Note: Make sure to add `.env` to your `.gitignore` file to keep your API key secure.
 
 
 
