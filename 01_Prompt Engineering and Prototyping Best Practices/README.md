@@ -37,15 +37,24 @@ Each assignment will have a few of the following categories of exercises:
 Please evaluate your system on the following questions:
 
 1. Explain the concept of object-oriented programming in simple terms to a complete beginner. 
-    - Aspect Tested:
+    - Aspect Tested: High level explanation of complicated concept
+    - Result of Test: Not passing the vibe check because explanation was complicated and all based on a metaphor that wasn't clear
+
 2. Read the following paragraph and provide a concise summary of the key points…
-    - Aspect Tested:
+    - Aspect Tested: Summerization 
+    - Result of Test: Not passing the vibe check because a summary has to be relatively short. The original paragraph was 5 sentences, the summary was 4. That's not a good summary (too long)
+
 3. Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.
-    - Aspect Tested:
+    - Aspect Tested: Creativity within the word limit bounds
+    - Result of Test: Passing the vibe check because it was reasonably creative (including being friends with a squirrel) and was pretty close to the word count limit (yes it was over but just barely over)
+
 4. If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?
-    - Aspect Tested:
+    - Aspect Tested: Reasoning (arithmetic)
+    - Result of Test: Passing the vibe check it actually provided chain of thought in its response, not just the response. And it was correct!
+
 5. Rewrite the following paragraph in a professional, formal tone…
-    - Aspect Tested:
+    - Aspect Tested: Changing tone (make more professional and formal) while maintaining the same points and sentiment
+    - Result of Test: Passing the vibe check because it honestly did a good job of just making a more professional and formal tone while genuinely maintaining the same points and sentiment 
 
 This "vibe check" now serves as a baseline, of sorts, to help understand what holes your application has.
 
@@ -54,6 +63,27 @@ This "vibe check" now serves as a baseline, of sorts, to help understand what ho
 Please make adjustments to your application that you believe will improve the vibe check done above, push the changes to your HF Space and redo the above vibe check.
 
 > NOTE: You may reach for improving the model, changing the prompt, or any other method.
+
+1. Explain the concept of object-oriented programming in simple terms to a complete beginner. 
+    - Aspect Tested: High level explanation of complicated concept
+    - Result of Test: Passing the vibe check because explanation was broken down into parts and each part was short and sweet (1-2 sentences). No long running metaphors were used
+
+2. Read the following paragraph and provide a concise summary of the key points…
+    - Aspect Tested: Summerization 
+    - Result of Test: Passing the vibe check because it was actually shorter than the original paragraph (5 sentences to 3 relatively short sentences) while still mentioning essentially what the paragraph was saying (i.e. it actually summarized it!)
+
+3. Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.
+    - Aspect Tested: Creativity within the word limit bounds
+    - Result of Test: Passing the vibe check because it was reasonably creative (including being friends with a stray cat) and was only 3 words over the word limit which is pretty good
+
+4. If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?
+    - Aspect Tested: Reasoning (arithmetic)
+    - Result of Test: Passing the vibe check it actually provided chain of thought in its response, not just the response. And it was correct! And it separated the work for apples and oranges which was helpful
+
+5. Rewrite the following paragraph in a professional, formal tone…
+    - Aspect Tested: Changing tone (make more professional and formal) while maintaining the same points and sentiment
+    - Result of Test: Passing the vibe check because it honestly did a good job of just making a more professional and formal tone while genuinely maintaining the same points and sentiment. I used the same original paragraph as before and even though this response was different, they were both of similar quality
+
 
 ### A Note on Vibe Checking
 
@@ -64,3 +94,13 @@ In essence, it's a first look to ensure your system isn't experiencing catastrop
 ##### 🧑‍🤝‍🧑❓ Discussion Question #1:
 
 What are some limitations of vibe checking as an evaluation tool?
+
+Answer: There are 3 limitations of vibe checking as an evaluation tool that stick out immediately:
+
+1. No way to quantify vibe checking. In practice (especially in data science where I'm from), we try a bunch of versions of a model. If 2 versions pass the vibe check, how can I compare them? There's no clear way of getting which one "passed the vibe check more"
+
+2. Too subjective. There is no numerical rubric or anything like that, which is how we usually evaluate in an objective way. Subjectivity can easily lead to bias
+
+3. Doesn't scale. It would take a long time to vibe check a lot of models. And typically we want to constantly monitor a model once it's in production. So now we have to vibe check all the time constantly, for a lot of models. This won't scale well at all
+
+That being said, vibe checking still has its place. It's a good first step evaluation tool while in early stages of making the model. But definitely not the end all be all for evaluation tools
