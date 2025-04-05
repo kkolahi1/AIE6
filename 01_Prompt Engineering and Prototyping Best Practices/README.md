@@ -64,6 +64,10 @@ Please make adjustments to your application that you believe will improve the vi
 
 > NOTE: You may reach for improving the model, changing the prompt, or any other method.
 
+I updated the model to gpt-4o and I updated the system prompt using Principle 10 from the 'Principled Instructions Are All You Need for Questioning Llama and GPT' paper provided to us
+
+Here are the results:
+
 1. Explain the concept of object-oriented programming in simple terms to a complete beginner. 
     - Aspect Tested: High level explanation of complicated concept
     - Result of Test: Passing the vibe check because explanation was broken down into parts and each part was short and sweet (1-2 sentences). No long running metaphors were used
