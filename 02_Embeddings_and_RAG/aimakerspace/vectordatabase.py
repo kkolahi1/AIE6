@@ -4,7 +4,11 @@ from typing import List, Tuple, Callable
 from aimakerspace.openai_utils.embedding import EmbeddingModel
 import asyncio
 
-
+"""
+This function computes the cosine similarity between two vectors, which we need
+to find the closest vectors in our vector database to a given query vector so we 
+can retrieve the most relevant chunks.
+"""
 def cosine_similarity(vector_a: np.array, vector_b: np.array) -> float:
     """Computes the cosine similarity between two vectors."""
     dot_product = np.dot(vector_a, vector_b)
@@ -12,7 +16,15 @@ def cosine_similarity(vector_a: np.array, vector_b: np.array) -> float:
     norm_b = np.linalg.norm(vector_b)
     return dot_product / (norm_a * norm_b)
 
-
+"""
+This is our main class for our self-built python vector database, which stores the 
+embeddings of our chunks (from our embedding model) in a dictionary where the chunks
+themselves are the keys. 
+It can take the query vector and get the cosine similarity of the query vector with
+each vector in the database, and then return the top k chunks, where the dev can 
+determine k (it can also take the query text instead of the query vector).  
+It can build our vector database asynchronously from a list of chunks.
+"""
 class VectorDatabase:
     def __init__(self, embedding_model: EmbeddingModel = None):
         self.vectors = defaultdict(np.array)
@@ -53,7 +65,12 @@ class VectorDatabase:
             self.insert(text, np.array(embedding))
         return self
 
-
+"""
+This is a test block showing how to use the VectorDatabase class properly (it creates
+a list of sentences, builds a vector database from them, searches and returns the top 
+k vectors when given a sentence, retrieves a specfic vector by its key(sentence), and 
+searches and returns the top k sentences when given a sentence).
+"""
 if __name__ == "__main__":
     list_of_text = [
         "I like to eat broccoli and bananas.",

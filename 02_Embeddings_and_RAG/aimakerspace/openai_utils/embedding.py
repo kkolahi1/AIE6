@@ -5,7 +5,12 @@ from typing import List
 import os
 import asyncio
 
-
+"""
+This is a wrapper class to more easily use OpenAI's embedding functionality.
+It allows you to do async bactch processing (default of batch size of 1024 chunks),
+async single chunk processing (useful for making mulitple single chunk requests concurrently),
+synchronous batch processing (one at a time), or synchronous single chunk processing.
+"""
 class EmbeddingModel:
     def __init__(self, embeddings_model_name: str = "text-embedding-3-small"):
         load_dotenv()
@@ -57,7 +62,8 @@ class EmbeddingModel:
 
         return embedding.data[0].embedding
 
-
+# This is a test block showing how to use the class
+# Note that we defined async functions (can be paused and resumed), so we need to use asyncio.run to run them
 if __name__ == "__main__":
     embedding_model = EmbeddingModel()
     print(asyncio.run(embedding_model.async_get_embedding("Hello, world!")))

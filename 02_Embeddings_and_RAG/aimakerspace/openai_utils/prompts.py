@@ -1,6 +1,10 @@
 import re
 
-
+"""
+The point of this code is to easily create properly formatted prompts for the OpenAI API.
+It makes sure we have proper role assignment (system, user, assistant) and that we can 
+easily substitute variables into the prompt.
+"""
 class BasePrompt:
     def __init__(self, prompt):
         """
@@ -68,7 +72,7 @@ class AssistantRolePrompt(RolePrompt):
     def __init__(self, prompt: str):
         super().__init__(prompt, "assistant")
 
-
+# This is a test block showing how to properly use the class
 if __name__ == "__main__":
     prompt = BasePrompt("Hello {name}, you are {age} years old")
     print(prompt.format_prompt(name="John", age=30))
