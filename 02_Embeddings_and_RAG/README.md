@@ -83,5 +83,25 @@ Looking forward to more AI-driven adventures! 🌟 Feel free to connect if you'd
 > Note: Make sure to add `.env` to your `.gitignore` file to keep your API key secure.
 
 
+##### ❓ Question #1:
+
+The default embedding dimension of text-embedding-3-small is 1536.
+
+1. Is there any way to modify this dimension?
+
+Answer: Yes! There is an optional parameter called `dimensions`, which is an integer, which allows you to REDUCE the number of dimensions (but not increase), which is done in a smart way as described below
+
+2. What technique does OpenAI use to achieve this?
+
+Answer: OpenAI uses Matryoshka Representation Learning (MRL), which is a smart way to make the embeddings. The basic idea is this: the dimensions progress from course to fine granularity, so if you need to reduce the dimensions (e.g. for speed or cost reasons), you can just keep the first n dimensions (where n is the number of dimensions you want) and throw the rest of the dimensions away. Then you just to need normalize the vector (which now only has n dimensions). This just means find its L2 norm (i.e. Euclidean norm) and divide by it (unless of course it is 0)
+
+
+##### ❓ Question #2:
+
+What are the benefits of using an `async` approach to collecting our embeddings?
+
+Answer: Let's first start with the difference between `async` and `sync`: essentially, `sync` executes operations one at a time (e.g. must finish one operation before moving on to the next). On the other hand, `async` executes multiple operations concurrently (it does NOT have to finish one operation before moving on to the next)
+
+Well, looking at our code, we use the method `abuild_from_list`, which itself calls `async_get_embeddings`, which is `async` and this is where the time savings really comes in: instead of making a API call to our OpenAI embedding model for each chunk, `async_get_embeddings` makes just one API call per batch. Since it can handle batch size of 1024 and we only have 373 chunks, that means we only need to make one API call for all of our chunks. This is a huge time saver as API calls really slow things down (it's not like we are using a crazy amount of computing power, we are just waiting to make the API connection)
 
 

@@ -19,9 +19,9 @@ def cosine_similarity(vector_a: np.array, vector_b: np.array) -> float:
 """
 This is our main class for our self-built python vector database, which stores the 
 embeddings of our chunks (from our embedding model) in a dictionary where the chunks
-themselves are the keys. 
-It can take the query vector and get the cosine similarity of the query vector with
-each vector in the database, and then return the top k chunks, where the dev can 
+themselves are the keys and the values are the embedding vectors, which are np.array
+objects. It can take the query vector and get the cosine similarity of the query vector 
+with each vector in the database, and then return the top k chunks, where the dev can 
 determine k (it can also take the query text instead of the query vector).  
 It can build our vector database asynchronously from a list of chunks.
 """

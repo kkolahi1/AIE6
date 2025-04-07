@@ -8,8 +8,9 @@ import asyncio
 """
 This is a wrapper class to more easily use OpenAI's embedding functionality.
 It allows you to do async bactch processing (default of batch size of 1024 chunks),
-async single chunk processing (useful for making mulitple single chunk requests concurrently),
-synchronous batch processing (one at a time), or synchronous single chunk processing.
+async single chunk processing (useful for making mulitple single chunk requests 
+concurrently), synchronous batch processing (one at a time), or synchronous single 
+chunk processing.
 """
 class EmbeddingModel:
     def __init__(self, embeddings_model_name: str = "text-embedding-3-small"):
