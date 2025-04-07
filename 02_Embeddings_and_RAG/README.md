@@ -89,19 +89,48 @@ The default embedding dimension of text-embedding-3-small is 1536.
 
 1. Is there any way to modify this dimension?
 
-Answer: Yes! There is an optional parameter called `dimensions`, which is an integer, which allows you to REDUCE the number of dimensions (but not increase), which is done in a smart way as described below
+##### Answer: 
+
+Yes! There is an optional parameter called `dimensions`, which is an integer, which allows you to REDUCE the number of dimensions (but not increase), which is done in a smart way as described below
 
 2. What technique does OpenAI use to achieve this?
 
-Answer: OpenAI uses Matryoshka Representation Learning (MRL), which is a smart way to make the embeddings. The basic idea is this: the dimensions progress from course to fine granularity, so if you need to reduce the dimensions (e.g. for speed or cost reasons), you can just keep the first n dimensions (where n is the number of dimensions you want) and throw the rest of the dimensions away. Then you just to need normalize the vector (which now only has n dimensions). This just means find its L2 norm (i.e. Euclidean norm) and divide by it (unless of course it is 0)
+##### Answer: 
+
+OpenAI uses Matryoshka Representation Learning (MRL), which is a smart way to make the embeddings. The basic idea is this: the dimensions progress from course to fine granularity, so if you need to reduce the dimensions (e.g. for speed or cost reasons), you can just keep the first n dimensions (where n is the number of dimensions you want) and throw the rest of the dimensions away. Then you just to need normalize the vector (which now only has n dimensions). This just means find its L2 norm (i.e. Euclidean norm) and divide by it (unless of course it is 0)
 
 
 ##### ❓ Question #2:
 
 What are the benefits of using an `async` approach to collecting our embeddings?
 
-Answer: Let's first start with the difference between `async` and `sync`: essentially, `sync` executes operations one at a time (e.g. must finish one operation before moving on to the next). On the other hand, `async` executes multiple operations concurrently (it does NOT have to finish one operation before moving on to the next)
+##### Answer: 
+
+Let's first start with the difference between `async` and `sync`: essentially, `sync` executes operations one at a time (e.g. must finish one operation before moving on to the next). On the other hand, `async` executes multiple operations concurrently (it does NOT have to finish one operation before moving on to the next) i.e. in parallel 
 
 Well, looking at our code, we use the method `abuild_from_list`, which itself calls `async_get_embeddings`, which is `async` and this is where the time savings really comes in: instead of making a API call to our OpenAI embedding model for each chunk, `async_get_embeddings` makes just one API call per batch. Since it can handle batch size of 1024 and we only have 373 chunks, that means we only need to make one API call for all of our chunks. This is a huge time saver as API calls really slow things down (it's not like we are using a crazy amount of computing power, we are just waiting to make the API connection)
 
+##### ❓ Question #3:
+
+When calling the OpenAI API - are there any ways we can achieve more reproducible outputs? 
+
+##### Answer:
+
+We can achieve more reproducible outputs by lowering the `temperature`, including lowering it all the way down to 0. Not all OpenAI models allow you adjust the temperature, but it is allowed for gpt-4o-mini, which is the model we are using
+
+
+We can also use the `structured outputs` optional parameter to ensure we get JSON formatted outputs (if that's something that we want)
+
+
+##### ❓ Question #4: 
+
+What prompting strategies could you use to make the LLM have a more thoughtful, detailed response?
+
+What is that strategy called?
+
+##### Answer:
+
+Chain of Thought prompting will help make the LLM have a more thoughtful, detailed response. This is pretty easy to implement too, we just tell the LLM (in a system message or user message) to "describe your reasoning in steps" or "explain your answer step by step" or something like that
+
+We can also use few-shot prompting where we give examples (user query + assistant response) to the LLM and specifically, we make sure that the assistant responses we provide are thoughtful and detailed. Then the LLM learns to answer in a similar way (thoughtful and detailed)
 
