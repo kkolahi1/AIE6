@@ -108,7 +108,7 @@ What are the benefits of using an `async` approach to collecting our embeddings?
 
 Let's first start with the difference between `async` and `sync`: essentially, `sync` executes operations one at a time (e.g. must finish one operation before moving on to the next). On the other hand, `async` executes multiple operations concurrently (it does NOT have to finish one operation before moving on to the next) i.e. in parallel 
 
-Well, looking at our code, we use the method `abuild_from_list`, which itself calls `async_get_embeddings`, which is `async` and this is where the time savings really comes in: instead of making a API call to our OpenAI embedding model for each chunk, `async_get_embeddings` makes just one API call per batch. Since it can handle batch size of 1024 and we only have 373 chunks, that means we only need to make one API call for all of our chunks. This is a huge time saver as API calls really slow things down (it's not like we are using a crazy amount of computing power, we are just waiting to make the API connection)
+Well, looking at our code, we use the method `abuild_from_list`, which itself calls `async_get_embeddings`, which is `async` and this is where the time savings really comes in: instead of making an API call to our OpenAI embedding model for each chunk, `async_get_embeddings` makes just one API call per batch. Since it can handle batch size of 1024 and we only have 373 chunks, that means we only need to make one API call for all of our chunks, and it handles each chunk CONCURRENTLY. This is a huge time saver 
 
 ##### ❓ Question #3:
 
