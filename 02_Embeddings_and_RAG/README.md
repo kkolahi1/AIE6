@@ -134,3 +134,6 @@ Chain of Thought prompting will help make the LLM have a more thoughtful, detail
 
 We can also use few-shot prompting where we give examples (user query + assistant response) to the LLM and specifically, we make sure that the assistant responses we provide are thoughtful and detailed. Then the LLM learns to answer in a similar way (thoughtful and detailed)
 
+##### Activity #1:
+
+(Done in the Pythonic_RAG_Assignment.ipynb notebook)
