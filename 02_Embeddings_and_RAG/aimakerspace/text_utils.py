@@ -38,8 +38,9 @@ class TextFileLoader:
         with open(self.path, "r", encoding=self.encoding) as f:
             self.documents.append(f.read())
 
-    def load_pdf(self):
-        reader = PdfReader(self.path)
+    def load_pdf(self, file_path=None): # Accept an optional file_path
+        path_to_load = file_path or self.path # Use file_path if provided, else self.path
+        reader = PdfReader(path_to_load)
         text = ""
         for page in reader.pages:
             text += page.extract_text() + "\n"
