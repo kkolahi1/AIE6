@@ -9,7 +9,7 @@
 
 | 🤓 Pre-work | 📰 Session Sheet | ⏺️ Recording     | 🖼️ Slides        | 👨‍💻 Repo         | 📝 Homework      | 📁 Feedback       |
 |:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|
-| [Session 3: Pre-Work](https://www.notion.so/Session-3-End-to-End-RAG-Deployment-and-2025-Industry-Use-Cases-1c8cd547af3d818fb863ce11710a31ec?pvs=4#1c8cd547af3d81468dbadb4d669435bd)| [Session 3: End-to-End RAG Deployment and 2025 Industry Use Cases ](https://www.notion.so/Session-3-End-to-End-RAG-Deployment-and-2025-Industry-Use-Cases-1c8cd547af3d818fb863ce11710a31ec) | Coming Soon!| Coming Soon! | You are here!| Coming Soon!| [AIE6 Feedback 4/8](https://forms.gle/oVeEd95qajYVhryF6)
+| [Session 3: Pre-Work](https://www.notion.so/Session-3-End-to-End-RAG-Deployment-and-2025-Industry-Use-Cases-1c8cd547af3d818fb863ce11710a31ec?pvs=4#1c8cd547af3d81468dbadb4d669435bd)| [Session 3: End-to-End RAG Deployment and 2025 Industry Use Cases ](https://www.notion.so/Session-3-End-to-End-RAG-Deployment-and-2025-Industry-Use-Cases-1c8cd547af3d818fb863ce11710a31ec) | [Recording](https://us02web.zoom.us/rec/share/sGuBqB5go4WPjALRA5y_QkzDHju0qiAtSanlWN8FZLV8mdviZWAcg8fHU8J-hbmp.HlMKdznBNkeB-CgB) (?0&gz5BF)| [Session 3: Industry Use Cases & End-to-End RAG](https://www.canva.com/design/DAGjaej4jRA/W4Vw66N4gbJWvMvojgR5Dg/edit?utm_content=DAGjaej4jRA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) |You Are Here! | [Session 3 Assignment: End-to-End RAG](https://forms.gle/KwkHPyCN6zb1ypno7)| [AIE6 Feedback 4/8](https://forms.gle/oVeEd95qajYVhryF6)
 
 Building off last week, we're going to take our Pythonic RAG application to the next level!
 
