@@ -1,0 +1,8 @@
+1. Introduction of findings
+2. Extension of context length
+3. Technique used: Quantized Low-Rank Adaptation (QLoRA)
+4. Training efficiency and duration
+5. Synthetic training samples generation
+6. Improved performance across evaluation tasks
+7. Significance of the achievement
+8. Call to action for reading the full paper
