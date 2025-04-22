@@ -1,7 +1,7 @@
 # 🧑‍💻 What is [AI Engineering](https://maven.com/aimakerspace/ai-eng-bootcamp)?
 
 <p align="center" draggable="false">
-<img src="https://cdn.discordapp.com/attachments/1114337373988343921/1361829201736372394/AIE-Cohort-7-Banner.png?ex=68002dc7&is=67fedc47&hm=05af3e6701984f4df5bdadcea14a7ee2cc7feb8b927afae2771eb54809139245&" 
+<img src="https://i.imgur.com/fTLO44k.png" 
      width="1000px"
      height="auto"/>
 </p>
