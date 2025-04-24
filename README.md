@@ -1,55 +1,78 @@
-# 🧑‍💻 What is [AI Engineering](https://maven.com/aimakerspace/ai-eng-bootcamp)?
 
-<p align="center" draggable="false">
-<img src="https://i.imgur.com/fTLO44k.png" 
-     width="1000px"
+<p align = "center" draggable=”false” ><img src="https://github.com/AI-Maker-Space/LLM-Dev-101/assets/37101144/d1343317-fa2f-41e1-8af1-1dbb18399719" 
+     width="200px"
      height="auto"/>
 </p>
 
-Learn more about [The AI Engineering Bootcamp!](https://aimakerspace.io/the-ai-engineering-bootcamp/)
+## <h1 align="center" id="heading">Session 7: Synthetic Data Generation and LangSmith</h1>
 
-AI Engineering refers to the industry-relevant skills that data science and engineering teams need to successfully **build, deploy, operate, and improve Large Language Model (LLM) applications in production environments**.  
+| 🤓 Pre-work | 📰 Session Sheet | ⏺️ Recording     | 🖼️ Slides        | 👨‍💻 Repo         | 📝 Homework      | 📁 Feedback       |
+|:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|:-----------------|
+| [Session 7: Pre-Work](https://www.notion.so/Session-7-Synthetic-Data-Generation-for-Evaluation-1c8cd547af3d81999da6cbd18ae4b6a9?pvs=4#1c8cd547af3d81edb0f8ca8017d1cfdb)| [Session 7: Synthetic Data Generation for Evaluation](https://www.notion.so/Session-7-Synthetic-Data-Generation-for-Evaluation-1c8cd547af3d81999da6cbd18ae4b6a9) | [Recording](https://us02web.zoom.us/rec/share/fSb3DEXkbvGFQgQwwXY9Htm7CzLKXqTuOscraGRRFaj7bC7XIODwhgP2VgXpx1Uu.dKkuAcnlOrlQ7Bcq) (M9g55ye#) | [Session 7: Synthetic Data Generation for Evaluation](https://www.canva.com/design/DAGjaZbyELk/2hj3-ZHrH6x4kjz1Y3kAYw/edit?utm_content=DAGjaZbyELk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)| You Are Here!| [Session 7: Synthetic Data Generation for Evaluation](https://forms.gle/DVmFHjkkgFpAKNoEA)| [AIE6 Feedback 4/22](https://forms.gle/Z1DahTCVsNPp6SrU6)
 
-In practice, this requires understanding both prototyping and production deployments.
+In today's assignment, we'll be creating Synthetic Data, and using it to benchmark (and improve) a LCEL RAG Chain.
 
-During the *prototyping* phase, Prompt Engineering, Retrieval Augmented Generation (RAG), Agents, and Fine-Tuning are all necessary tools to be able to understand and leverage. Prototyping includes:
-1. Building RAG Applications
-2. Building with Agent and Multi-Agent Frameworks
-3. Fine-Tuning LLMs & Embedding Models
-4. Deploying LLM Prototype Applications to Users
+- 🤝 BREAKOUT ROOM #1
+  1. Use RAGAS to Generate Synthetic Data
 
-When *productionizing* LLM application prototypes, there are many important aspects ensuring helpful, harmless, honest, reliable, and scalable solutions for your customers or stakeholders. Productionizing includes:
-1. Evaluating RAG and Agent Applications
-2. Improving Search and Retrieval Pipelines for Production
-3. Monitoring Production KPIs for LLM Applications
-4. Setting up Inference Servers for LLMs and Embedding Models
-5. Building LLM Applications with Scalable, Production-Grade Components
+- 🤝 BREAKOUT ROOM #2
+  1. Load them into a LangSmith Dataset
+  2. Evaluate our RAG chain against the synthetic test data
+  3. Make changes to our pipeline
+  4. Evaluate the modified pipeline
 
-This bootcamp builds on our two previous courses, [LLM Engineering](https://maven.com/aimakerspace/llm-engineering) and [LLM Operations](https://maven.com/aimakerspace/llmops) 👇
+## Ship 🚢
 
-- Large Language Model Engineering (LLM Engineering) refers to the emerging best-practices and tools for pretraining, post-training, and optimizing LLMs prior to production deployment.  Pre- and post-training techniques include unsupervised pretraining, supervised fine-tuning, alignment, model merging, distillation, quantization. and others.
-    
-- Large Language Model Ops (LLM Ops, or LLMOps (as from [WandB](https://docs.wandb.ai/guides/prompts) and [a16z](https://a16z.com/emerging-architectures-for-llm-applications/))) refers to the emerging best-practices, tooling, and improvement processes used to manage production LLM applications throughout the AI product lifecycle.  LLM Ops is a subset of Machine Learning Operations (MLOps) that focuses on LLM-specific infrastructure and ops capabilities required to build, deploy, monitor, and scale complex LLM applications in production environments.  _This term is being used much less in industry these days._
+The completed notebook!
 
-# 🏆 **Grading and Certification**
+#### 🏗️ BONUS ACTIVITY (OPTIONAL):
 
-To become **AI-Makerspace Certified**, which will open you up to additional opportunities for full and part-time work within our community and network, you must:
+Reproduce the RAGAS Synthetic Data Generation Steps - but utilize a LangGraph Agent Graph, instead of the Knowledge Graph approach.
 
-1. Complete all project assignments.
-2. Complete a project and present during Demo Day.
-3. Receive at least an 85% total grade in the course.
+This generation should leverage the [Evol Instruct](https://arxiv.org/pdf/2304.12244) method to generate synthetic data.
 
-If you do not complete all assignments, participate in Demo Day, or maintain a high-quality standard of work, you may still be eligible for a *certificate of completion* if you miss no more than 2 live sessions.
+Your final state (output) should contain (at least, not limited to):
 
-# 📚 About
+1. `List(dict)`: Evolved Questions, their IDs, and their Evolution Type.
+2. `List(dict)`: Question IDs, and Answer to the referenced Evolved Question.
+3. `List(dict)`: Question IDs, and the relevant Context(s) to the Evolved Question.
 
-This GitHub repository is your gateway to mastering the art of AI Engineering.  ***All assignments for the course will be released here for your building, shipping, and sharing adventures!***
+The Graph should handle:
 
-# 🙏 Contributions
+1. Simple Evolution.
+2. Multi-Context Evolution.
+3. Reasoning Evolution.
 
-We believe in the power of collaboration. Contributions, ideas, and feedback are highly encouraged! Let's build the ultimate resource for AI Engineering together.
+It should take, as input, a list of LangChain Documents.
 
-Please to reach out with any questions or suggestions. 
+### Deliverables
 
-Happy coding! 🚀🚀🚀
+- A short Loom of the notebook, and a 1min. walkthrough of the application in full
 
+## Share 🚀
+
+Make a social media post about your final application!
+
+### Deliverables
+
+- Make a post on any social media platform about what you built!
+
+Here's a template to get you started:
+
+```
+🚀 Exciting News! 🚀
+
+I am thrilled to announce that I have just built and shipped Synthetic Data Generation, benchmarking, and iteration with RAGAS & LangChain! 🎉🤖
+
+🔍 Three Key Takeaways:
+1️⃣ 
+2️⃣ 
+3️⃣ 
+
+Let's continue pushing the boundaries of what's possible in the world of AI and question-answering. Here's to many more innovations! 🚀
+Shout out to @AIMakerspace !
+
+#LangChain #QuestionAnswering #RetrievalAugmented #Innovation #AI #TechMilestone
+
+Feel free to reach out if you're curious or would like to collaborate on similar projects! 🤝🔥
+```
