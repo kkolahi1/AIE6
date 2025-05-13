@@ -23,7 +23,10 @@ https://docs.google.com/document/d/1zti0W70-rcuc9_23vsF_AfurYzU79V9HtQP_JqeQ_eI/
 
 ## All Relevent code:
 
-Can be found in the AB_Testing_RAG_Agent.ipynb notebook here
+Can be found in the AB_Testing_RAG_Agent.ipynb notebook here:
+
+https://github.com/kkolahi1/AIE6/blob/main/11_Certification_Challenge/AB_Testing_RAG_Agent.ipynb 
+
 
 ## Features
 
