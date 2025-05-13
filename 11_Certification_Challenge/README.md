@@ -13,6 +13,11 @@ pinned: false
 
 This application is a Streamlit-based frontend for an AB Testing QA system that uses a carefully designed retrieval-augmented generation (RAG) approach with a LangGraph architecture.
 
+## Document Addressing the Deliverables for this Certification Challenge:
+
+https://docs.google.com/document/d/1zti0W70-rcuc9_23vsF_AfurYzU79V9HtQP_JqeQ_eI/edit?usp=sharing 
+
+
 ## Features
 
 - QA system specialized in AB Testing topics
