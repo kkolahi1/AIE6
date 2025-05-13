@@ -13,13 +13,17 @@ pinned: false
 
 This application is a Streamlit-based frontend for an AB Testing QA system that uses a carefully designed retrieval-augmented generation (RAG) approach with a LangGraph architecture.
 
+## 5 Minute or Less Loom Walkthrough:
+
+https://www.loom.com/share/04d9ff3e756f4d3dbe1aa5a3cbcb39d9 
+
 ## Document Addressing the Deliverables for this Certification Challenge:
 
 https://docs.google.com/document/d/1zti0W70-rcuc9_23vsF_AfurYzU79V9HtQP_JqeQ_eI/edit?usp=sharing 
 
-## 5 Minute or Less Loom Walkthrough:
+## All Relevent code:
 
-https://www.loom.com/share/04d9ff3e756f4d3dbe1aa5a3cbcb39d9 
+Can be found in the AB_Testing_RAG_Agent.ipynb notebook here
 
 ## Features
 
