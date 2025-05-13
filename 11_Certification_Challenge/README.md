@@ -17,6 +17,9 @@ This application is a Streamlit-based frontend for an AB Testing QA system that 
 
 https://docs.google.com/document/d/1zti0W70-rcuc9_23vsF_AfurYzU79V9HtQP_JqeQ_eI/edit?usp=sharing 
 
+## 5 Minute or Less Loom Walkthrough:
+
+https://www.loom.com/share/04d9ff3e756f4d3dbe1aa5a3cbcb39d9 
 
 ## Features
 
